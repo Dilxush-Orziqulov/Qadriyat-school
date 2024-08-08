@@ -1,0 +1,1191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --color-orange: #ec8d18;
+    --text-color: #21209c;
+    --back-text: #eeeeee;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* Header Start */
+
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    border-bottom: 4px solid var(--text-color);
+    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 11111;
+}
+
+.nav_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.navbar_2{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    top: 65px;
+    height: 100vh;
+    transform: translateX(0);
+    transition: .2s;
+}
+
+.navbar_hide{
+    transform: translateX(1000px);
+    transition: .2s;
+}
+
+.navbar_2 ul{
+    list-style: none;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar_2 ul li{
+    color: #8d8d8d;
+    font-size: 1.1rem
+}
+
+.navbar_2 ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem
+}
+
+.logo {
+    width: 140px;
+}
+
+.logo a img {
+    width: 100%;
+}
+
+.navbar {
+    width: 700px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 70px;
+    justify-content: center;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.header_end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+}
+
+.dropdown {
+    display: flex;
+    width: 115px;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 215, 215);
+    transition: .2s;
+    position: relative;
+}
+
+.dropdown:hover {
+    border-color: rgb(19, 208, 255);
+    transition: .2s;
+}
+
+.dropdown:hover .drop {
+    display: flex;
+}
+
+.dropdown .drop_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown .drop_item div img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+
+.dropdown .drop_item div span {
+    color: var(--text-color);
+    margin: 0 20px 0 7px;
+}
+
+.dropdown .drop_item div i {
+    color: rgb(205, 205, 205);
+}
+
+.header_btn {
+    width: 170px;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_btn a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.bars_btn {
+    display: none;
+}
+
+.bars_btn i {
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.drop {
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    width: 110px;
+    border-radius: 5px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    transition: .2s;
+    gap: 5px;
+}
+
+.drop div {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: .2s;
+    background-color: #fff;
+    gap: 10px;
+}
+
+.drop img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.drop div a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.drop div:hover {
+    background-color: rgb(248, 248, 248);
+    transform: .2s;
+}
+
+/* Header End */
+
+/* Main start */
+
+.main_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    color: var(--text-color);
+}
+
+.main-top_left {
+    width: 40%;
+}
+
+.main-top_left h4 {
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.main-top_left h1 {
+    font-size: 3.4rem;
+    margin-bottom: 35px;
+}
+
+.main-top_left div {
+    display: flex;
+    gap: 30px;
+}
+
+.main-top_left div h3 {
+    font-size: 2rem;
+    width: 500px;
+    font-weight: 400;
+}
+
+.main-top_right {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.main-top_right div {
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+}
+
+.main-top_right div img {
+    width: 100%;
+    height: 35vh;
+    border-radius: 10px;
+}
+
+/* FORM */
+
+.main_form {
+    box-shadow: 0 0 15px rgb(224, 224, 224);
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0;
+    gap: 20px;
+    color: var(--text-color);
+}
+
+form h1 {
+    font-size: 3rem;
+    width: 10%;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+}
+
+.name_input,
+.number_input {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--color-orange);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.input_box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: #bbbbbb;
+    font-weight: 400;
+}
+
+.input_box input::placeholder {
+    color: #bbbbbb;
+}
+
+.form_btn {
+    width: 100%;
+    background-color: var(--text-color);
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.form_btn input {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.bb_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.bb_title h1 {
+    font-size: 3rem;
+    width: 400px;
+    color: var(--text-color);
+}
+
+.arrows {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    width: 150px;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* COURSE */
+
+.course_box {
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.course_box .container {
+    overflow: scroll;
+    width: 1200px;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 2000px;
+    gap: 30px;
+    overflow: scroll;
+}
+
+.course_card {
+    background-color: var(--color-orange);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    width: 33%;
+}
+
+.card_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.card_title h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.course_info p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 23px;
+    height: 115px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    color: #f1efeb;
+}
+
+.text_check {
+    border-top: 1px solid rgb(233, 233, 233);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text_check div {
+    display: flex;
+    gap: 10px;
+    color: #f1efeb;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.course_card .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.course_card .price h4 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.course_card .price h2 {
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin: 10px 0;
+}
+
+.course_card .course_btn {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 15px 20px;
+    background-color: var(--text-color);
+    color: #fcf8f3;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.test-text {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    padding-bottom: 50px;
+    gap: 30px;
+}
+
+.test-text h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.test-text h2 {
+    font-size: 2.5rem;
+    color: var(--color-orange);
+    width: 100%;
+}
+
+.test-text h2 p {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.test-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    color: #fff;
+    background-color: var(--text-color);
+    border-radius: 25px;
+    transition: .2s;
+}
+
+.test-card:hover,
+.result_img_box img:hover,
+.teacher:hover {
+    transform: translateY(-4px);
+    transition: .2s;
+    box-shadow: 0 0 25px 3px rgb(184, 183, 183);
+    cursor: pointer;
+}
+
+.test-card .test-card-title {
+    font-size: 1.9rem;
+    padding: 30px 0 0;
+    font-weight: 500;
+}
+
+.test-card .test-info {
+    background-color: var(--text-color);
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 0px 40px;
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.test-time {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    padding: 30px 40px;
+    background-color: var(--color-orange);
+}
+
+.test-card,
+.test-time .time_question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.test-card .test-time .time_question span {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.test-card .test-time .time_question h5 {
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.test-card .test-time .test_btn {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid #c4c4c4;
+    outline: none;
+}
+
+.result_img_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+}
+
+.result_img_box .container {
+    display: flex;
+    align-items: center;
+    scroll-behavior: auto;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.result_img_box div img {
+    width: 400px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.course_finished {
+    background-color: #ececec;
+}
+
+.course_finished .container {
+    padding: 80px 0;
+}
+
+.course_finished h2 p {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.course_finished h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--color-orange);
+    width: 80%;
+    padding: 40px 0;
+}
+
+.course_finished ul {
+    list-style-type: none;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.course_finished ul li {
+    width: 45%;
+    display: flex;
+    gap: 30px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    border-bottom: 8px solid var(--color-orange);
+    padding-bottom: 20px;
+}
+
+.school_name_box {
+    background-color: var(--color-orange);
+    padding: 30px 0;
+}
+
+.school_name_box .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.school_name h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.school_name_box .container img {
+    width: 80px;
+}
+
+.school_about {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 70px 0;
+    width: 100%;
+}
+
+.school_about .school_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.school_about .school_info h1 {
+    color: var(--color-orange);
+    font-size: 4.2rem;
+    width: 100%;
+}
+
+.school_about .school_info div {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+}
+
+.school_about .school_info div h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.school_about .school_info div h4 {
+    font-weight: 400;
+    font-size: 1.7rem;
+    width: 80%;
+}
+
+.img-carusel {
+    width: 100%;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+
+.img-carusel .carusel {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.img-carusel .carusel {
+    overflow-x: auto;
+}
+
+.img-carusel .carusel div img {
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.teachers_box .teacher-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teachers_box .teacher-title div h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.teachers_box {
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.teachers_box .container {
+    overflow: scroll;
+}
+
+.teacher_wrapper {
+    width: 2400px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 40px 0;
+    overflow: auto;
+}
+
+.teacher {
+    width: 30%;
+    border-radius: 20px;
+    background-color: var(--color-orange);
+    display: flex;
+    position: relative;
+}
+
+.teacher img {
+    width: 100%;
+    transform: translateY(-30px);
+}
+
+.teacher-bottom {
+    width: 100%;
+    background-color: var(--text-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-radius: 20px;
+    z-index: 111;
+    padding: 20px 30px 40px;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.teacher-bottom h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.teacher-bottom p {
+    font-size: 1.3rem;
+    width: 230px;
+    font-weight: 400;
+}
+
+.teacher_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotate(45deg);
+    background-color: transparent;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    font-size: 1.6rem;
+    bottom: 10px;
+    right: 15px;
+}
+
+.apply {
+    position: relative;
+    padding: 30px 0;
+}
+
+.apply div h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 30px 0;
+}
+
+.apply .apply_main {
+    background-color: var(--color-orange);
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.apply .apply_main .apply_text {
+    width: 45%;
+}
+
+.apply .apply_text h3 {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 35px;
+    width: 100%;
+}
+
+.apply div .form {
+    position: absolute;
+    width: 45%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(190, 190, 190);
+    z-index: 222;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    right: 20px;
+    bottom: 20px;
+}
+
+.apply .form div h2 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.apply .form input {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--color-orange);
+    padding: 10px;
+    border-radius: 10px;
+    color: #bbbbbb;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.apply input::placeholder {
+    color: #bbbbbb;
+    font-size: 1.2rem;
+}
+
+.apply .form_btn {
+    width: 100%;
+    background-color: var(--text-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.apply .form_btn input {
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+.apply .form p {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+
+footer {
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 90px 90px 0 0;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .foot_text {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    gap: 20px;
+}
+
+.footer .foot_img {
+    width: 200px;
+}
+
+footer .foot_img img {
+    width: 200px;
+}
+
+footer h2 {
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+footer .foot_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    width: 300px;
+}
+
+footer .foot_list li {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+footer .foot_list li a {
+    font-size: 1.2rem;
+}
+
+footer .foot_icon {
+    display: flex;
+    width: 400px;
+    gap: 30px;
+}
+
+footer .foot_icon div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer .foot_icon div i {
+    color: var(--color-orange);
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .container {
+        width: 88%;
+    }
+
+    .course_box .container {
+        width: 85%;
+    }
+
+    .course_box .course {
+        width: 2750px;
+        padding: 20px 0;
+    }
+
+    .course .course_card {
+        width: 18%;
+    }
+
+    .teacher_wrapper {
+        width: 2200px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header_end {
+        width: 21%;
+    }
+
+    .bars_btn {
+        display: flex;
+    }
+
+    .header_btn {
+        display: none;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        color: var(--text-color);
+    }
+
+    form h1 {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    form .input_box {
+        width: 100%;
+    }
+
+    .course .course_card {
+        width: 15%;
+    }
+
+    .test-text {
+        flex-direction: column;
+    }
+
+    .school_about .school_info {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .teacher_wrapper {
+        width: 2455px;
+    }
+
+    .apply {
+        padding: 0;
+        transform: translateY(60px);
+    }
+
+    .apply div .form {
+        position: static;
+        width: 100%;
+    }
+
+    .apply_main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .apply .apply_main .apply_text {
+        width: 100%;
+    }
+
+    footer {
+        padding-top: 100px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    footer .container .foot_text{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 13px;
+    }
+
+    .course .course_card {
+        width: 14%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .main_top {
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 20px;
+    }
+
+    .main-top_left {
+        width: 100%;
+    }
+
+    .main-top_right {
+        width: 100%;
+    }
+
+    .course .course_card {
+        width: 11%;
+    }
+
+    .test-card {
+        width: 100%;
+    }
+
+    .course_finished ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .course_finished ul li {
+        width: 100%;
+    }
+
+    .teacher_wrapper {
+        width: 1850px;
+    }
+
+    footer .container .foot_text{
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 571px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header_end {
+        width: 25%;
+    }
+
+    .course_finished {
+        padding: 0 20px;
+    }
+
+    .course .course_card {
+        width: 15%;
+    }
+
+    .teacher_wrapper {
+        width: 1600px;
+    }
+}
