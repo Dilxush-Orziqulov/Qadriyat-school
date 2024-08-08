@@ -59,6 +59,7 @@ header {
     height: 100vh;
     transform: translateX(0);
     transition: .2s;
+    display: none;
 }
 
 .navbar_hide{
@@ -1022,6 +1023,10 @@ footer .foot_icon div i {
 
     .container {
         width: 80%;
+    }
+
+    .navbar_2{
+        display: flex;
     }
 
     .navbar {
